@@ -1,0 +1,10 @@
+flutter_native_splash:
+  android: true
+  ios: true
+  color: "#FFFFFF"
+  color_dark: "#000000"
+  image: "images/sign_up_logo.png"
+
+  android_12:
+    color: "#FFFFFF"
+    image: "images/loogo.png"
