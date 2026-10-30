@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:super_clean/home_page.dart';
 import 'package:super_clean/login_page.dart';
 import 'package:super_clean/sign_up.dart';
 
@@ -18,7 +19,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
-      home:  LoginPage(),
+      home:  HomePage(),
     );
   }
 }
