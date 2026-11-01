@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:super_clean/home_page.dart';
 import 'package:super_clean/login_page.dart';
+import 'package:super_clean/other_services_card.dart';
 import 'package:super_clean/sign_up.dart';
 
 void main() {

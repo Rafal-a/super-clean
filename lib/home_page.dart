@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:super_clean/carousel_images.dart';
+import 'package:super_clean/other_services_card.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -7,8 +8,8 @@ class HomePage extends StatefulWidget {
   @override
   State<HomePage> createState() => _HomePageState();
 }
-class _HomePageState extends State<HomePage> {
 
+class _HomePageState extends State<HomePage> {
   @override
   void initState() {
     super.initState();
@@ -22,13 +23,14 @@ class _HomePageState extends State<HomePage> {
           padding: EdgeInsets.all(20),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               SizedBox(height: 40),
               Stack(
                 children: [
                   TextField(
                     enabled: false,
-                    controller: TextEditingController(text: "Iraq , Baghdad",),
+                    controller: TextEditingController(text: "Iraq , Baghdad"),
                     decoration: InputDecoration(
                       disabledBorder: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(24),
@@ -36,12 +38,13 @@ class _HomePageState extends State<HomePage> {
                           color: Color.fromRGBO(30, 30, 30, 1.0),
                           width: 1,
                         ),
-
                       ),
                       suffixIcon: IconButton(
-                        color: Colors.black, onPressed: () {
-                        //TODO: LATER ON
-                      }, icon: Icon(Icons.edit_location_alt_outlined),
+                        color: Colors.black,
+                        onPressed: () {
+                          //TODO: LATER ON
+                        },
+                        icon: Icon(Icons.edit_location_alt_outlined),
                         iconSize: 32,
                       ),
                     ),
@@ -49,6 +52,21 @@ class _HomePageState extends State<HomePage> {
                 ],
               ),
               CarouselImages(),
+              Padding(
+                padding: EdgeInsets.symmetric(vertical: 20),
+                child: Text(
+                  'Other services',
+                  style: TextStyle(fontSize: 16),
+                  textAlign: TextAlign.start,
+                ),
+              ),
+              OtherServicesCard(title: 'غسيل سيارات متنقل'),
+              OtherServicesCard(title: 'غسيل تانكيات'),
+              OtherServicesCard(title: 'تنظيف الواح شمسية'),
+              //OtherServicesCard(title: 'غسيل فرشات'),
+              //OtherServicesCard(title: 'تنظيف قنفات موقعي'),
+
+
             ],
           ),
         ),
